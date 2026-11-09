@@ -1,136 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        table {
-            width: 500px;
-            border-collapse: collapse ;
-            /* Obrigatório para ter o título da tabela fixo */
-            position: relative;
-        }
-        td, th {
-            border: 1px solid black;
-            padding: 10px;
-        }
-        thead, tfoot {
-            background-color: gray;
-            color: white;
-        }
-
-        thead > tr > th {
-            /* No título da linha do cabeçalho vou grudar "sticky" */
-            position: sticky; /* grudar */
-            top: 0; /* na posição 0 */
-            background-color: gray;
-
-        }
-        td.num {
-            text-align: right;
-        }
-        caption {
-            /* Tamanho da fonte */
-            font-size: 1.5em;
-            /* Para colocar em negrito */
-            font-weight: bold;
-            /* Para deixar mais espaçado */
-            padding: 10px;
-            /* Colocar um fundo no meu caption */
-            background-color: lightgray;
-
-        }
-        /* Efeito Zebra
-            tdoby > tr - Todo tr que é filho do tdoby
-            pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
-            Outros exemplos:
-            3n - de 3 em 3 linhas;
-            2n-1 - Vai iniciar na primeira linha;
-            odd - Linhas impares;
-            even - Linhas pares;
-
-            Posso também personalisar somente as pares ou impares.
-
-            tbody > tr:nth-child(odd) {
-                background-color: blue;
-            }
-                
-            tbody > tr:nth-child(even) {
-                background-color: yellow;
-            }
-        */
-        tbody > tr:nth-child(2n) {
-            background-color: gray;
-
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explicação sobre Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .conteudo {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .links a {
+      text-decoration: none;
+      background-color: #4a90e2;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .links a:hover {
+      background-color: #357ABD;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    p {
+      line-height: 1.6;
+      text-align: justify;
+    }
+  </style>
 </head>
 <body>
-    <h1>Uso de tabelas grandes</h1>
-    <!-- Anatomia para tabelas grandes 
-        Table
-            Caption - Legenda da tabela
-            Thead - cabeça
-                TR, TD, TH
-            Tbody - corpo
-                TR, TD, TH
-            Tfoot - pé 
-                TR, TD, TH
-    -->
-    <table>
-        <caption>
-            População das Unidades Federativas
-        </caption>
-        <thead>
-            <tr>
-                <!-- Importante colocar o Escopo do título 
-                    col - colunas
-                    row - linhas 
-                -->
-                <th scope="col">Estado</th>
-                <th scope="col" style="width: 100px">População</th>
-            </tr>
+  <header>
+    <h1>Aprendendo sobre Links</h1>
+  </header>
 
-        </thead>
-        <tbody>
-            <tr>
-                <td>São Paulo</td>
-                <td class="num">45.973.190</td>
-            </tr>
-            <tr>
-                <td>Minas Gerais</td>
-                <td class="num">21.322.692</td>
-            </tr>
-            <tr>
-                <td>Rio de Janeiro</td>
-                <td class="num">17.219.679</td>
-            </tr>
-            <tr>
-                <td>Bahia</td>
-                <td class="num">14 850 513</td>
-            </tr>
-            <tr>
-                <td>Paraná</td>
-                <td class="num">11 824 665</td>
-            </tr>
-            <tr>
-                <td>Rio Grande do Sul</td>
-                <td class="num">11 229 915</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th scope="row">Total de Habitantes</th>
-                <td class="num"><strong>122.420.654</strong></td>
-            </tr>
+  <div class="conteudo">
+    <p>
+      Nesta página vamos aprender sobre links. Links são elementos clicáveis que levam você a outras páginas, arquivos ou recursos.
+      Abaixo temos três tipos de links diferentes para você explorar e, no final, um link para o exercício.
+    </p>
 
-        </tfoot>
+    <div class="links">
+        <a href="links-externo.html" target="janela">Links Externos</a>
+        <a href="links-internos.html" target="janela">Links Internos</a>
+        <a href="links-download.html" target="janela">Links de Download</a>
+      <!-- Novo link para o exercício -->
+      <a href="exercicio-links.pdf" target="janela">Exercício sobre Links</a>
+    </div>
 
-    </table>
-        
+    <iframe name="janela" src="" title="Conteúdo dos links"></iframe>
+  </div>
 </body>
 </html>

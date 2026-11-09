@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: #a6e085;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+nav#externo p {
+    display: inline-block;
+    background-color: #6fb5dd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+nav#download p {
+    display: inline-block;
+    background-color: #b1e085;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+nav#nave li {
+    display: inline-block;
+    background-color: #63ccdf;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+nav#oii li {
+    display: inline-block;
+    background-color: #cfe085;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 8px;
+}
